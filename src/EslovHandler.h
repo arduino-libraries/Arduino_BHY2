@@ -38,13 +38,13 @@ private:
   uint8_t _rxBuffer[ESLOV_MAX_LENGTH];
 
   EslovState _state;
+  uint8_t _last;
 
 private:
   friend class Arduino_BHY2;
   void debug(Stream &stream);
   void dump();
   Stream *_debug;
-  uint8_t _last;
 };
 
 extern EslovHandler eslovHandler;
